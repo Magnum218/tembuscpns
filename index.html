@@ -976,8 +976,7 @@ function downloadPlan(){
   LAST_PLAN.forEach(function(day){
     html += '<div class="day"><p><b>Hari ' + day.d + ' — ' + esc(day.focus) + '</b></p><p>' + esc(day.act) + '</p><p><i>Target: ' + esc(day.target) + '</i></p></div>';
   });
-  html += '<p>Kerjakan drilling-nya di halaman Tryout CPNS (menu Drilling Premium / Latihan per Topik). Soal latihan orisinal mengikuti kisi-kisi SKD — bukan soal resmi BKN.</p><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e65a019caad4401bbcd0d15107071b69"}'></script><!-- End Cloudflare Web Analytics -->
-</body></html>';
+  html += '<p>Kerjakan drilling-nya di halaman Tryout CPNS (menu Drilling Premium / Latihan per Topik). Soal latihan orisinal mengikuti kisi-kisi SKD — bukan soal resmi BKN.</p></body></html>';
   var blob = new Blob([html], { type:"text/html" });
   var a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
@@ -1204,5 +1203,6 @@ $("btn-back-home").addEventListener("click", function(){
   fillTopics(); refreshPremiumUi(); renderHistory();
 })();
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e65a019caad4401bbcd0d15107071b69"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
